@@ -101,6 +101,9 @@ if (isset($_GET['ref'])) {
 		case 'profil-kampung-list':
 			require_once('pages/profil-kampung-list.php');
 			break;
+		case 'profil-kampung-entry':
+			require_once('pages/profil-kampung-entry.php');
+			break;
 		case 'personil':
 			require_once('pages/personil.php');
 			break;

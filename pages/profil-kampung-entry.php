@@ -9,8 +9,8 @@
 		  <input type="text" class="form-control" placeholder="Masukkan kode Kampung" aria-describedby="basic-addon1">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Nama Kampung</span>
-		  <input type="text" class="form-control" placeholder="Masukkan nama Kampung" aria-describedby="basic-addon1">
+		  <span class="input-group-addon" id="basic-addon2">Nama Kampung</span>
+		  <input type="text" class="form-control" placeholder="Masukkan nama Kampung" aria-describedby="basic-addon2">
 		</div>
 		<div class="input-group">
 		  <span class="input-group-addon" id="basic-addon1">Kecamatan</span>
@@ -21,8 +21,48 @@
 		  <input type="text" class="form-control" placeholder="Masukkan nama Kabupaten" aria-describedby="basic-addon1">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Nama Prov.</span>
-		  <input type="text" class="form-control" placeholder="Masukkan nama Prov." aria-describedby="basic-addon1">
+		  <span class="input-group-addon" id="basic-addon1">Provinsi</span>
+		  <input type="text" class="form-control" placeholder="Masukkan nama Provinsi" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group">
+		  <span class="input-group-addon" id="basic-addon1">Tahun Bentuk</span>
+		  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group">
+		  <span class="input-group-addon" id="basic-addon1">Dasar Hukum</span>
+		  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group">
+		  <span class="input-group-addon" id="basic-addon1">Peta Resmi</span>
+		  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group">
+		  <span class="input-group-addon" id="basic-addon1">Koordinat Lat.</span>
+		  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group">
+		  <span class="input-group-addon" id="basic-addon1">Koordinat Lon.</span>
+		  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group">
+		  <span class="input-group-addon" id="basic-addon1">Batas Utara</span>
+		  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group">
+		  <span class="input-group-addon" id="basic-addon1">Batas Selatan</span>
+		  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group">
+		  <span class="input-group-addon" id="basic-addon1">Batas Timur</span>
+		  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group">
+		  <span class="input-group-addon" id="basic-addon1">Batas Barat</span>
+		  <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		</div>
+		<div class="btn-group pull-right" role="group" aria-label="...">
+		  <a href="?ref=profil-kampung-list" class="btn btn-warning btn-lg">Kembali</a>
+		  <button type="submit" class="btn btn-success btn-lg">Simpan</button>
 		</div>
     </form>
   </div>
