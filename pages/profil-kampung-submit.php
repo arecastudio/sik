@@ -20,7 +20,7 @@ if (strlen($pum)>0 && strlen($kampung)>0 && strlen($kecamatan)>0 && strlen($kabu
 	echo "Siap Simpan Data";
 }else{
 	?>
-<div class="alert alert-warning alert-dismissible" role="alert">
+<div class="alert alert-danger alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <strong>Warning!</strong> Data yang di-input belum lengkap.
 </div>
