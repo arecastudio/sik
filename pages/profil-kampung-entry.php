@@ -85,6 +85,11 @@
 		  <span class="input-group-addon" id="basic-addon1">Batas Barat</span>
 		  <input type="text" id="barat" class="form-control" placeholder="" aria-describedby="basic-addon1">
 		</div>
+
+<center>
+    <p id="hasil-submit" style="font-weight: bold;color: #00f;padding: 10px;"></p>
+</center>
+		
 		<div class="btn-group pull-right" role="group" aria-label="...">
 		  <a href="?ref=profil-kampung-list" class="btn btn-warning btn-lg">Kembali</a>
 		  <button type="button" onclick="SubmitData()" class="btn btn-primary btn-lg">Simpan</button>
@@ -92,7 +97,3 @@
     </form>
   </div>
 </div>
-
-<center>
-    <p id="hasil-submit" style="font-weight: bold;color: #00f;padding: 10px;"></p>
-</center>
