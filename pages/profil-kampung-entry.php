@@ -3,7 +3,7 @@
     <h3 class="panel-title">Profil Kampung / Kelurahan</h3>
   </div>
   <div class="panel-body">
-    <form>
+    <form method="post" action="">
     	<div class="input-group">
 		  <span class="input-group-addon" id="basic-addon1">Kode PUM</span>
 		  <input type="text" class="form-control" placeholder="Masukkan kode Kampung" aria-describedby="basic-addon1">
