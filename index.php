@@ -40,7 +40,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data Pokok<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="?ref=profil-kampung">Profil Kampung/Kelurahan</a></li>
+            <li><a href="?ref=profil-kampung-list">Profil Kampung/Kelurahan</a></li>
             <li><a href="?ref=personil">Personil</a></li>
             <li><a href="#">Data Umum</a></li>
             <li><a href="#">Keuangan</a></li>
@@ -98,8 +98,8 @@
 if (isset($_GET['ref'])) {
 	$ref=$_GET['ref'];
 	switch ($ref) {
-		case 'profil-kampung':
-			require_once('pages/profil-kampung.php');
+		case 'profil-kampung-list':
+			require_once('pages/profil-kampung-list.php');
 			break;
 		case 'personil':
 			require_once('pages/personil.php');
