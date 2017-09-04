@@ -4,7 +4,7 @@
   </div>
   <div class="panel-body">
   	<a href="?ref=profil-kampung-entry" class="btn btn-success btn-sm">+ Tambah Data Kampung / Kelurahan</a>
-  	<table class="table">
+  	<table class="table table-bordered">
   		<thead>
   			<tr>
   				<th>#</th>
