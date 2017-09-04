@@ -1,9 +1,21 @@
 <script type="text/javascript">
 	function SubmitData() {
 	    var keys = $("[name='kode_pum']").val(),
-	    nama_kampung = $("[name='nama-kampung']").val(),
-	    kecamatan =$("#kecamatan").val();
-	    $.post("pages/profil-kampung-submit.php", { keys: keys,nama_kampung:nama_kampung,kecamatan:kecamatan},
+	    kampung = $("[name='nama-kampung']").val(),
+	    kecamatan =$("#kecamatan").val(),
+	    kabupaten =$("#kabupaten").val(),
+	    provinsi =$("#provinsi").val(),
+	    tahun =$("#tahun").val(),
+	    hukum =$("#dasar_hukum").val(),
+	    peta =$("#peta_resmi").val(),
+	    lat =$("#lat").val(),
+	    lon =$("#lon").val(),
+	    selatan =$("#selatan").val(),
+	    utara =$("#utara").val(),
+	    timur =$("#timur").val(),
+	    barat =$("#barat").val();
+	    
+	    $.post("pages/profil-kampung-submit.php", {keys:keys,kampung:kampung,kecamatan:kecamatan,kabupaten:kabupaten,provinsi:provinsi,tahun:tahun,hukum:hukum,peta:peta,lat:lat,lon:lon,selatan:selatan,utara:utara,timur:timur,barat:barat},
 	    function(data) {
 		 $('#hasil-submit').html(data);
 		 /*$('#form-submit-entry-data-kampung')[0].reset();*/
@@ -39,7 +51,7 @@
 		</div>
 		<div class="input-group">
 		  <span class="input-group-addon" id="basic-addon1">Tahun Bentuk</span>
-		  <input type="text" id="tahun_bentuk" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		  <input type="text" id="tahun" class="form-control" placeholder="" aria-describedby="basic-addon1">
 		</div>
 		<div class="input-group">
 		  <span class="input-group-addon" id="basic-addon1">Dasar Hukum</span>
