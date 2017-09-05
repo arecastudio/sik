@@ -30,13 +30,13 @@ if (strlen($pum)>0 && strlen($kampung)>0 && strlen($kecamatan)>0 && strlen($kabu
 		  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		  <strong>Success!</strong> Data berhasil ditambahkan.
 		</div>
+		<script type="text/javascript">document.getElementById('form-submit-entry-data-kampung').reset();</script>
 		<?php
 	}
 	$stmt->close();
 
 }else{
-	?>
-	<script type="text/javascript">$('#form-submit-entry-data-kampung')[0].reset();</script>
+	?>	
 	<div class="alert alert-danger alert-dismissible" role="alert">
 	  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	  <strong>Warning!</strong> Data yang di-input belum lengkap.
