@@ -1,4 +1,7 @@
-<?php require_once('pages/inc.php');?>
+<?php require_once('pages/inc.php');
+$conn=new mysqli(HOST,USER,PASS,DB);
+if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
+?>
 
 <!DOCTYPE html>
 <html>
@@ -121,3 +124,6 @@ if (isset($_GET['ref'])) {
 
 </body>
 </html>
+<?php
+$conn->close();
+?>
