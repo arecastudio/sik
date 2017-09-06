@@ -68,7 +68,7 @@ if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Potensi Kampung<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Profil Keluarga</a></li>
+            <li><a href="?ref=sumber-daya-alam">Sumber Daya Alam</a></li>
             <li><a href="#">Profil Keluarga</a></li>
           </ul>
         </li>
@@ -111,6 +111,9 @@ if (isset($_GET['ref'])) {
 			break;
 		case 'personil':
 			require_once('pages/personil.php');
+			break;
+		case 'sumber-daya-alam':
+			require_once('pages/sumber-daya-alam.php');
 			break;
 		default:
 			# code...

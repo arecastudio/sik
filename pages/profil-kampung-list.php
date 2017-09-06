@@ -50,7 +50,7 @@
 		  				<td>$row[13]</td>
 		  				<td>$row[14]</td>
 		  				<td><a href=\"#\" class=\"btn btn-sm btn-danger\"><span class=\"glyphicon glyphicon-trash\"></span></a></td>
-		  				<td><a href=\"#\" class=\"btn btn-sm btn-warning\"><span class=\"glyphicon glyphicon-pencil\"></span></a></td>
+		  				<td><a href=\"?ref=profil-kampung-entry&edit=$row[0]\" class=\"btn btn-sm btn-warning\"><span class=\"glyphicon glyphicon-pencil\"></span></a></td>
 		  			</tr>
 					";
 					$i++;
