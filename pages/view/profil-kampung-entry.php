@@ -15,7 +15,7 @@
 	    timur =$("#timur").val(),
 	    barat =$("#barat").val();
 	    
-	    $.post("pages/profil-kampung-submit.php", {keys:keys,kampung:kampung,kecamatan:kecamatan,kabupaten:kabupaten,provinsi:provinsi,tahun:tahun,hukum:hukum,peta:peta,lat:lat,lon:lon,selatan:selatan,utara:utara,timur:timur,barat:barat},
+	    $.post("pages/model/profil-kampung-submit.php", {keys:keys,kampung:kampung,kecamatan:kecamatan,kabupaten:kabupaten,provinsi:provinsi,tahun:tahun,hukum:hukum,peta:peta,lat:lat,lon:lon,selatan:selatan,utara:utara,timur:timur,barat:barat},
 	    function(data) {
 		 $('#hasil-submit').html(data);
 		 /*$('#form-submit-entry-data-kampung')[0].reset();*/
