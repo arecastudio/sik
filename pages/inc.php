@@ -23,4 +23,8 @@ function base_url(){
 	return "http://localhost/sik/";
 }
 
+function break_point(){
+	echo "<div id=\"break-point\">Pemerintah Kab. Jayapura &copy; 2017. All right reserved. Powered by <a href=\"http://arecastudio.github.io/\" target=\"_blank\">Developer</a>.</div>";
+}
+
 ?>

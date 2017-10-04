@@ -1,6 +1,7 @@
 <?php require_once('pages/inc.php');
 $conn=new mysqli(HOST,USER,PASS,DB);
 if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
+$id_pokok_desa=1;
 ?>
 
 <!DOCTYPE html>
@@ -18,8 +19,51 @@ if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
 			margin-bottom: 5px;
 		}
 		.input-group-addon{
-			min-width: 200px;
+			/*min-width: 200px;*/
 		}
+    .panel{
+      min-height: 450px;
+    }
+    .bingkai{
+      border:1px dashed #999;
+      padding-bottom: 2px;
+      border-radius: 5px;
+      float: left;
+      margin-left: 5px;
+      margin-bottom: 5px;
+    }
+    .inputhektar{
+      text-align: right;
+    }
+    .labelhektar{
+      text-align: right;
+      min-width: 200px;
+    }
+    .labelkapsi{
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    body{
+      background-image: url('assets/img/wallpaper.jpg');
+      margin-bottom:20px;
+      /*margin-top: 50px; */
+    }
+
+  #break-point {
+      position: fixed;
+      height: 20px;
+      background: linear-gradient(to right,#000,#333,#555,#888,#999,#aaa,#bbb,#ccc,#ddd, #ddd, #eee);
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      margin-bottom: 0px;
+      text-align: center;
+      font-size: 75%;
+      z-index:10001;        
+  }
+  #break-point a {color: #333;}
+
 	</style>
 </head>
 <body>
@@ -68,7 +112,8 @@ if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Potensi Kampung<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="?ref=sumber-daya-alam">Sumber Daya Alam</a></li>
+            <li><a href="?ref=penggunaan-lahan">Penggunaan Lahan</a></li>
+            <li><a href="?ref=sumber-daya-alam">Sumber Daya Kampung</a></li>
             <li><a href="#">Profil Keluarga</a></li>
           </ul>
         </li>
@@ -118,6 +163,12 @@ if (isset($_GET['ref'])) {
 		case 'sumber-daya-alam':
 			require_once('pages/view/sumber-daya-alam.php');
 			break;
+    case 'penggunaan-lahan':
+      require_once('pages/view/penggunaan-lahan.php');
+      break;
+    case 'tanah-kering':
+      require_once('pages/view/tanah-kering.php');
+      break;
 		default:
 			# code...
 			break;
@@ -127,7 +178,7 @@ if (isset($_GET['ref'])) {
 	</div>
 	<div class="kaki"></div>
 </div>
-
+<?php break_point();?>
 </body>
 </html>
 <?php
