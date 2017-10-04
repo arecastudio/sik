@@ -16,6 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `jenis_tanah`
+--
+
+DROP TABLE IF EXISTS `jenis_tanah`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `jenis_tanah` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `jenis_tanah`
+--
+
+LOCK TABLES `jenis_tanah` WRITE;
+/*!40000 ALTER TABLE `jenis_tanah` DISABLE KEYS */;
+INSERT INTO `jenis_tanah` VALUES (1,'TANAH SAWAH'),(2,'TANAH KERING'),(3,'TANAH BASAH'),(4,'TANAH PERKEBUNAN'),(5,'TANAH FAS. UMUM'),(6,'TANAH HUTAN');
+/*!40000 ALTER TABLE `jenis_tanah` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pokok_desa`
 --
 
@@ -51,6 +75,90 @@ LOCK TABLES `pokok_desa` WRITE;
 INSERT INTO `pokok_desa` VALUES (1,'1234567890','Ebungfuw','Enarotali','Jayapura','Papua','1997','UU No. 5 Thn 1990','-','-2.560397','140.669000','Gunung','Gunung','Jurang','Danau'),(2,'1234567890','Paniai','Putali','Jayapura','Papua','1997','UU No. 5 Thn 1990','-','-2.560397','140.669000','Kali','Batu','Jurang','Danau'),(3,'541235456879','Sabron Yaru','Sentani Barat','Jayapura','Papua','1988','UUD','Ada','-2.528759','140.417322','danau','danau','gunung','gunung'),(4,'456156451','Nusu','Sentani Barat','Jayapura','Papua','1990','UUD','-','-2.528759','140.417322','jurang','jurang','jurang','jurang'),(5,'7894845654','Sabron Samon','Sentani Barat','Jayapura','Papua','1988','UUD','-','-','-','-','-','-','-'),(6,'7456456745646','Doyo Lama','Sentani Barat','Jayapura','Papua','1981','UUD','-','-','-','-','-','-','-'),(7,'22334','Hinekombe','Sentani Kota','Jayapura','Papua','1970','UUD','-','-','-','-','-','-','-');
 /*!40000 ALTER TABLE `pokok_desa` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `tanah_desa`
+--
+
+DROP TABLE IF EXISTS `tanah_desa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tanah_desa` (
+  `id_pokok_desa` int(11) NOT NULL,
+  `id_tanah_guna` int(11) NOT NULL,
+  `luas` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_pokok_desa`,`id_tanah_guna`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tanah_desa`
+--
+
+LOCK TABLES `tanah_desa` WRITE;
+/*!40000 ALTER TABLE `tanah_desa` DISABLE KEYS */;
+INSERT INTO `tanah_desa` VALUES (1,1,55),(1,2,53),(1,3,7),(1,4,0);
+/*!40000 ALTER TABLE `tanah_desa` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tanah_guna`
+--
+
+DROP TABLE IF EXISTS `tanah_guna`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tanah_guna` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_jenis` int(11) NOT NULL,
+  `satuan` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Ha',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tanah_guna`
+--
+
+LOCK TABLES `tanah_guna` WRITE;
+/*!40000 ALTER TABLE `tanah_guna` DISABLE KEYS */;
+INSERT INTO `tanah_guna` VALUES (1,'SAWAH IRIGAS TEKNIS',1,'Ha'),(2,'SAWAH IRIGASI SEPARUH TEKNIS',1,'Ha'),(3,'SAWAH TADAH HUJAN',1,'Ha'),(4,'SAWAH PASANG SURUT',1,'Ha'),(5,'TEGAL / LADANG',2,'Ha'),(6,'PEMUKIMAN',2,'Ha'),(7,'PEKARANGAN',2,'Ha'),(8,'TANAH RAWA',3,'Ha'),(9,'PASANG SURUT',3,'Ha'),(10,'LAHAN GAMBUT',3,'Ha'),(11,'SITU / WADUK / DANAU',3,'Ha'),(12,'TANAH BENGKOK',5,'Ha'),(13,'TANAH TITI SARA',5,'Ha'),(14,'KEBUN DESA',5,'Ha'),(15,'SAWAH DESA',5,'Ha'),(16,'LAPANGAN OLAHRAGA',5,'Ha'),(17,'PERKANTORAN PEMERINTAH',5,'Ha'),(18,'RUANG PUBLIK / TAMAN',5,'Ha'),(19,'PEMAKAMAN',5,'Ha'),(20,'PEMBUANGAN SAMPAH',5,'Ha'),(21,'SEKOLAH / P. TINGGI',5,'Ha'),(22,'PERTOKOAN',5,'Ha'),(23,'PASAR',5,'Ha'),(24,'TERMINAL',5,'Ha'),(25,'JALAN',5,'Ha'),(26,'DAERAH TANGKAPAN AIR',5,'Ha'),(27,'USAHA PERIKANAN',5,'Ha'),(28,'SUTET / LISTRIK TEG. TINGGI',5,'Ha'),(29,'HUTAN LINDUNG',6,'Ha'),(30,'HUTAN PRODUKSI TETAP',6,'Ha'),(31,'HUTAN PRODUKSI TERBATAS',6,'Ha'),(32,'HUTAN KONSERVASI',6,'Ha'),(33,'HUTAN ADAT',6,'Ha'),(34,'HUTAN ASLI',6,'Ha'),(35,'HUTAN SEKUNDER',6,'Ha'),(36,'HUTAN BUATAN',6,'Ha'),(37,'HUTAN MANGROVE',6,'Ha'),(38,'SUAKA ALAM',6,'Ha'),(39,'SUAKA MARGASATWA',6,'Ha'),(40,'HUTAN RAKYAT',6,'Ha'),(41,'PERKEBUNAN RAKYAT',4,'Ha'),(42,'PERKEBUNAN NEGARA',4,'Ha'),(43,'PERKEBUNAN SWASTA',4,'Ha'),(44,'PERKEBUNAN PERORANGAN',4,'Ha');
+/*!40000 ALTER TABLE `tanah_guna` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tani_kebun`
+--
+
+DROP TABLE IF EXISTS `tani_kebun`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tani_kebun` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_pokok_desa` int(11) NOT NULL,
+  `nama_komoditas` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `luas` int(11) NOT NULL DEFAULT '0',
+  `hasil_panen` int(11) NOT NULL DEFAULT '0',
+  `nilai_produksi` int(11) NOT NULL DEFAULT '0',
+  `biaya_pupuk` int(11) NOT NULL DEFAULT '0',
+  `biaya_bibit` int(11) NOT NULL DEFAULT '0',
+  `biaya_obat` int(11) NOT NULL DEFAULT '0',
+  `biaya_lainnya` int(11) NOT NULL DEFAULT '0',
+  `pemasaran_hasil` double NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tani_kebun`
+--
+
+LOCK TABLES `tani_kebun` WRITE;
+/*!40000 ALTER TABLE `tani_kebun` DISABLE KEYS */;
+INSERT INTO `tani_kebun` VALUES (1,1,'pepaya bakar',0,0,0,0,0,0,0,0),(2,1,'Labu kuning',0,0,0,0,0,0,0,0),(3,1,'ttt',0,0,0,0,0,0,0,0),(4,1,'yyyy',0,0,0,0,0,0,0,0),(5,1,'tyty',0,0,0,0,0,0,0,0),(6,1,'dfsfsf',0,0,0,0,0,0,0,0),(7,1,'dsfsfsf',0,0,0,0,0,0,0,0),(8,1,'fgdgfdg',0,0,0,0,0,0,0,0),(9,1,'dfgdgfdg',0,0,0,0,0,0,0,0);
+/*!40000 ALTER TABLE `tani_kebun` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -61,4 +169,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-04  6:33:54
+-- Dump completed on 2017-10-05  6:45:31

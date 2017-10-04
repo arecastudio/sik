@@ -13,7 +13,7 @@ if ( isset($_POST['nama']) && isset($_POST['hidden_id_pokok_desa']) ) {
 		$stmt->bind_param('ss',$id_pokok_desa,$nama);
 		if ($stmt->execute()) {
 			echo "Berhasil menambahkan data !";
-			echo "<script type=\"text/javascript\">document.getElementById('form').reset();</script>";
+			echo "<script type=\"text/javascript\">document.getElementById(\"form\").reset();</script>";
 		}else{
 			echo "Gagal menambahkan data !";
 		}

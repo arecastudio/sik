@@ -16,7 +16,7 @@
 </div>
 
 <div class="table-responsive col-sm-12">
-	<table class="table table-bordered">
+	<table class="table table-bordered table-hover">
 		<thead>
 			<tr>
 				<th>#</th>
@@ -65,6 +65,10 @@
 	        success: function (response) {
 	            /*$('#myModal').modal('show');*/
 	            $(".hasil-submit").html(response);
+
+	            $.get('pages/model/pertanian-perkebunan-show.php', function (data) {
+		            $('#pertanian-perkebunan-show').html(data);
+		        });	        
 	        }
 	      });
 	    });
