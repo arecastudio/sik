@@ -44,6 +44,13 @@ $id_pokok_desa=1;
       font-weight: bold;
     }
 
+    th{
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .tengah{text-align: center;}
+
     body{
       background-image: url('assets/img/wallpaper.jpg');
       margin-bottom:20px;
@@ -114,7 +121,7 @@ $id_pokok_desa=1;
           <ul class="dropdown-menu">
             <li><a href="?ref=penggunaan-lahan">Penggunaan Lahan</a></li>
             <!--li><a href="?ref=sumber-daya-alam">Sumber Daya Kampung</a></li-->
-            <li><a href="#">Profil Keluarga</a></li>
+            <li><a href="?ref=pertanian-perkebunan">Produksi Pertanian & Perkebunan</a></li>
           </ul>
         </li>
       </ul>        

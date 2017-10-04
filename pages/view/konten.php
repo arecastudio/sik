@@ -8,21 +8,24 @@ if (isset($_GET['ref'])) {
 		case 'profil-kampung-entry':
 			require_once('pages/view/profil-kampung-entry.php');
 			break;
-    case 'profil-kampung-edit':
-      require_once('pages/view/profil-kampung-edit.php');
-      break;
+	    case 'profil-kampung-edit':
+	      require_once('pages/view/profil-kampung-edit.php');
+	      break;
 		case 'personil':
 			require_once('pages/view/personil.php');
 			break;
 		case 'sumber-daya-alam':
 			require_once('pages/view/sumber-daya-alam.php');
 			break;
-    case 'penggunaan-lahan':
-      require_once('pages/view/penggunaan-lahan.php');
-      break;
-    case 'tanah-kering':
-      require_once('pages/view/tanah-kering.php');
-      break;
+	    case 'penggunaan-lahan':
+	      require_once('pages/view/penggunaan-lahan.php');
+	      break;
+	    case 'tanah-kering':
+	      require_once('pages/view/tanah-kering.php');
+	      break;
+	    case 'pertanian-perkebunan':
+	      require_once('pages/view/pertanian-perkebunan.php');
+	      break;
 		default:
 			# code...
 			break;
