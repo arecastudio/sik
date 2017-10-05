@@ -44,6 +44,11 @@ $id_pokok_desa=1;
       font-weight: bold;
     }
 
+.text-luas{
+max-width:80px;
+text-align:right;
+}
+
     th{
       text-align: center;
       font-weight: bold;

@@ -11,6 +11,7 @@ if ( isset($_POST['nama']) && isset($_POST['hidden_id_pokok_desa']) ) {
 		$sql="INSERT IGNORE INTO tani_kebun(id_pokok_desa,nama_komoditas)VALUES(?,?);";
 		$stmt=$conn->prepare($sql);
 		$stmt->bind_param('ss',$id_pokok_desa,$nama);
+		$nama=ucwords($nama);
 		if ($stmt->execute()) {
 			echo "Berhasil menambahkan data !";
 			echo "<script type=\"text/javascript\">document.getElementById(\"form\").reset();</script>";
