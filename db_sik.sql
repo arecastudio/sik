@@ -97,7 +97,7 @@ CREATE TABLE `tanah_desa` (
 
 LOCK TABLES `tanah_desa` WRITE;
 /*!40000 ALTER TABLE `tanah_desa` DISABLE KEYS */;
-INSERT INTO `tanah_desa` VALUES (1,1,55),(1,2,53),(1,3,7),(1,4,0);
+INSERT INTO `tanah_desa` VALUES (1,1,55),(1,2,53),(1,3,7),(1,4,0),(1,5,0),(1,6,141),(1,7,70);
 /*!40000 ALTER TABLE `tanah_desa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -146,8 +146,9 @@ CREATE TABLE `tani_kebun` (
   `biaya_obat` int(11) NOT NULL DEFAULT '0',
   `biaya_lainnya` int(11) NOT NULL DEFAULT '0',
   `pemasaran_hasil` double NOT NULL DEFAULT '0',
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -156,7 +157,7 @@ CREATE TABLE `tani_kebun` (
 
 LOCK TABLES `tani_kebun` WRITE;
 /*!40000 ALTER TABLE `tani_kebun` DISABLE KEYS */;
-INSERT INTO `tani_kebun` VALUES (1,1,'pepaya bakar',0,0,0,0,0,0,0,0),(2,1,'Labu kuning',0,0,0,0,0,0,0,0),(3,1,'ttt',0,0,0,0,0,0,0,0),(4,1,'yyyy',0,0,0,0,0,0,0,0),(5,1,'tyty',0,0,0,0,0,0,0,0),(6,1,'dfsfsf',0,0,0,0,0,0,0,0),(7,1,'dsfsfsf',0,0,0,0,0,0,0,0),(8,1,'fgdgfdg',0,0,0,0,0,0,0,0),(9,1,'dfgdgfdg',0,0,0,0,0,0,0,0);
+INSERT INTO `tani_kebun` VALUES (4,1,'Lemon Nipis',0,0,0,0,0,0,0,0,'2017-10-05 13:15:42'),(5,1,'Jeruk Purut',0,0,0,0,0,0,0,0,'2017-10-05 13:17:15'),(6,1,'Ketapang Kampung',70,0,280,0,0,0,0,0,'2017-10-05 20:57:29');
 /*!40000 ALTER TABLE `tani_kebun` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -169,4 +170,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-05  6:45:31
+-- Dump completed on 2017-10-06  6:38:51
