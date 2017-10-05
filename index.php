@@ -45,7 +45,7 @@ $id_pokok_desa=1;
     }
 
 .text-luas{
-max-width:80px;
+max-width:100px;
 text-align:right;
 }
 

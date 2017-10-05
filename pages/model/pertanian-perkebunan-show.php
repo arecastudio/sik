@@ -17,19 +17,19 @@ if ($stmt->execute()) {
 	while ($row=$result->fetch_row()) {
 		$i++;
 		?>
-			<tr>
+			<tr align="center">
 				<td><?php echo $i;?></td>
-				<td><?php echo $row[2];?></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td align="left"><?php echo $row[2];?></td>
+				<td><?php echo $row[3];?></td>
+				<td><?php echo $row[4];?></td>
+				<td><?php echo $row[5];?></td>
+				<td><?php echo $row[6];?></td>
+				<td><?php echo $row[7];?></td>
+				<td><?php echo $row[8];?></td>
+				<td><?php echo $row[9];?></td>
+				<td><?php echo $row[10];?></td>
+				<td><button class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
+				<td><button class="btn btn-sm btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></td>
 			</tr>
 		<?php
 	}
