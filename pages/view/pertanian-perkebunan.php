@@ -55,26 +55,31 @@
 	</table>
 </div>
 
-
   </div>
 </div>
 
+<div id="dialog" title="Konfirmasi">
+  Yakin untuk menghapus item ini: <span id="komoditas_hapus"></span> ?
+  <input type="hidden" name="" id="id_hapus" />
+</div>
+
+
 <script type="text/javascript">
     $(document).ready(function() {  
-        $.get('pages/model/pertanian-perkebunan-show.php', function (data) {
+        $.get('pages/model/pertanian-perkebunan.php?act=show', function (data) {
             $('#pertanian-perkebunan-show').html(data);
         });
 
 	  $('#submit').click(function(){
 	      $.ajax({
 	        type: 'post',
-	        url: 'pages/model/pertanian-perkebunan-simpan.php',
+	        url: 'pages/model/pertanian-perkebunan.php?act=simpan',
 	        data: $('#form').serialize(),
 	        success: function (response) {
 	            /*$('#myModal').modal('show');*/
 	            $(".hasil-submit").html(response);
 
-	            $.get('pages/model/pertanian-perkebunan-show.php', function (data) {
+	            $.get('pages/model/pertanian-perkebunan.php?act=show', function (data) {
 		            $('#pertanian-perkebunan-show').html(data);
 		        });	        
 	        }
