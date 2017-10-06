@@ -9,21 +9,16 @@ if (isset($_GET['act'])) {
 			if ( isset($_POST['nama']) && isset($_POST['hidden_id_pokok_desa']) ) {
 				$nama=trim($_POST['nama']);$nama=ucwords($nama);
 				$id_pokok_desa=trim($_POST['hidden_id_pokok_desa']);
-				$hpanen=trim($_POST['hpanen']);
-				$satuan=trim($_POST['satuan']);
-				$nproduk=trim($_POST['nproduk']);
-				$bbaku=trim($_POST['bbaku']);
-				$bpenolong=trim($_POST['bpenolong']);
-				$byantara=trim($_POST['byantara']);
-				$phasil=trim($_POST['phasil']);
+				$jpemilik=trim($_POST['jpemilik']);
+				$jpopulasi=trim($_POST['jpopulasi']);
 				if (strlen($nama)>0) {
 					$sql="
-INSERT INTO hasil_hutan
-(id_pokok_desa, nama_komoditas, hasil_panen, satuan, nilai_produksi, nilai_baku, biaya_penolong, biaya_antara, pemasaran_hasil)
-VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)
+					INSERT INTO peternakan
+					(id_pokok_desa, nama_komoditas, jml_pemilik, jml_populasi)
+					VALUES(?,?,?,?)
 					;";
 					$stmt=$conn->prepare($sql);
-					$stmt->bind_param('isisiiiii',$id_pokok_desa,$nama,$hpanen,$satuan,$nproduk,$bbaku,$bpenolong,$byantara,$phasil);
+					$stmt->bind_param('isii',$id_pokok_desa,$nama,$jpemilik,$jpopulasi);
 					if ($stmt->execute()) {
 						echo "Berhasil menambahkan data !";
 						echo "<script type=\"text/javascript\">document.getElementById(\"form\").reset();</script>";
@@ -38,7 +33,7 @@ VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)
 			if(isset($_GET['id_hapus'])){
 				$id_hapus=$_GET['id_hapus'];
 				#echo "menghapus data ".$id_hapus;
-				$sql="DELETE FROM  hasil_hutan WHERE id=?;";
+				$sql="DELETE FROM  peternakan WHERE id=?;";
 				$stmt=$conn->prepare($sql);
 				$stmt->bind_param('i',$id_hapus);
 				if ($stmt->execute()) {
@@ -49,8 +44,8 @@ VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)
 			break;
 		default:
 			$sql="
-			SELECT id, id_pokok_desa, nama_komoditas, hasil_panen, satuan, nilai_produksi, nilai_baku, biaya_penolong, biaya_antara, pemasaran_hasil, tanggal
-			FROM hasil_hutan
+			SELECT id, id_pokok_desa, nama_komoditas, jml_pemilik, jml_populasi, tanggal
+			FROM peternakan
 			WHERE id_pokok_desa=?
 			ORDER BY tanggal DESC;
 			";
@@ -67,12 +62,7 @@ VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)
 							<td><?php echo $i;?></td>
 							<td align="left"><?php echo $row[2];?></td>
 							<td><?php echo $row[3];?></td>
-							<td><?php satuan_panen($row[4]);?></td>
-							<td><?php echo $row[5];?></td>
-							<td><?php echo $row[6];?></td>
-							<td><?php echo $row[7];?></td>
-							<td><?php echo $row[8];?></td>
-							<td><?php echo $row[9];?></td>
+							<td><?php echo $row[4];?></td>
 							<td colspan="2"><button class="btn btn-xs btn-danger btn-hapus" id="<?php echo $row[0];?>"  name="<?php echo $row[2];?>" ><span class="glyphicon glyphicon-trash"></span></button></td>
 							<!--td><button class="btn btn-sm btn-warning"><span class="glyphicon glyphicon-pencil"></span></button></td-->
 						</tr>
@@ -81,7 +71,7 @@ VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)
 				if ($i==0) {
 					?>
 						<tr>
-							<td colspan="11">
+							<td colspan="6">
 			<p class="alert alert-warning tengah" role="alert">
 			  <a href="#" class="alert-link">Data belum ada</a>
 			</p>
@@ -106,13 +96,13 @@ $(document).ready(function() {
           "Ya" : function() {
               /*alert("You have confirmed!");*/
               var id_hapus=$('#id_hapus').val();
-	        	$.get('pages/model/kehutanan.php?act=hapus&id_hapus='+id_hapus, function (data) {
+	        	$.get('pages/model/peternakan.php?act=hapus&id_hapus='+id_hapus, function (data) {
 	            	$('.hasil-submit').html(data);
 	        	});
               $(this).dialog("close");
 
-	            $.get('pages/model/kehutanan.php?act=show', function (data) {
-		            $('#kehutanan-show').html(data);
+	            $.get('pages/model/peternakan.php?act=show', function (data) {
+		            $('#peternakan-show').html(data);
 		        });	
 
           },

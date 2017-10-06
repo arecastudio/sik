@@ -133,8 +133,8 @@ text-align:right;
             <!--li><a href="?ref=sumber-daya-alam">Sumber Daya Kampung</a></li-->
             <li><a href="?ref=pertanian-perkebunan">Produksi Pertanian & Perkebunan</a></li>
             <li><a href="?ref=kehutanan">Kehutanan</a></li>
-            <li><a href="#">Peternakan</a></li>
-            <li><a href="#">Sumber Air</a></li>
+            <li><a href="?ref=peternakan">Peternakan</a></li>
+            <li><a href="?ref=sumber-air">Sumber Air</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Pariwisata</a></li>
             <li role="separator" class="divider"></li>

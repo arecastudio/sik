@@ -29,6 +29,12 @@ if (isset($_GET['ref'])) {
 	    case 'kehutanan':
 	      require_once('pages/view/kehutanan.php');
 	      break;
+	     case 'peternakan':
+	     	require_once('pages/view/peternakan.php');
+	     	break;
+	     case 'sumber-air':
+	     	require_once('pages/view/sumber-air.php');
+	     	break;
 		default:
 			# code...
 			break;

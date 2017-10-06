@@ -73,6 +73,34 @@ INSERT INTO `jenis_tanah` VALUES (1,'TANAH SAWAH'),(2,'TANAH KERING'),(3,'TANAH 
 UNLOCK TABLES;
 
 --
+-- Table structure for table `peternakan`
+--
+
+DROP TABLE IF EXISTS `peternakan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `peternakan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_pokok_desa` int(11) NOT NULL,
+  `nama_komoditas` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jml_pemilik` int(11) NOT NULL DEFAULT '0',
+  `jml_populasi` int(11) NOT NULL DEFAULT '0',
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `peternakan`
+--
+
+LOCK TABLES `peternakan` WRITE;
+/*!40000 ALTER TABLE `peternakan` DISABLE KEYS */;
+INSERT INTO `peternakan` VALUES (1,1,'Babi',50,1500,'2017-10-06 05:01:41'),(2,1,'Anjing',100,5000,'2017-10-06 05:01:54');
+/*!40000 ALTER TABLE `peternakan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pokok_desa`
 --
 
@@ -107,6 +135,55 @@ LOCK TABLES `pokok_desa` WRITE;
 /*!40000 ALTER TABLE `pokok_desa` DISABLE KEYS */;
 INSERT INTO `pokok_desa` VALUES (1,'1234567890','Ebungfuw','Enarotali','Jayapura','Papua','1997','UU No. 5 Thn 1990','-','-2.560397','140.669000','Gunung','Gunung','Jurang','Danau'),(2,'1234567890','Paniai','Putali','Jayapura','Papua','1997','UU No. 5 Thn 1990','-','-2.560397','140.669000','Kali','Batu','Jurang','Danau'),(3,'541235456879','Sabron Yaru','Sentani Barat','Jayapura','Papua','1988','UUD','Ada','-2.528759','140.417322','danau','danau','gunung','gunung'),(4,'456156451','Nusu','Sentani Barat','Jayapura','Papua','1990','UUD','-','-2.528759','140.417322','jurang','jurang','jurang','jurang'),(5,'7894845654','Sabron Samon','Sentani Barat','Jayapura','Papua','1988','UUD','-','-','-','-','-','-','-'),(6,'7456456745646','Doyo Lama','Sentani Barat','Jayapura','Papua','1981','UUD','-','-','-','-','-','-','-'),(7,'22334','Hinekombe','Sentani Kota','Jayapura','Papua','1970','UUD','-','-','-','-','-','-','-');
 /*!40000 ALTER TABLE `pokok_desa` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sumber_air`
+--
+
+DROP TABLE IF EXISTS `sumber_air`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sumber_air` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sumber_air`
+--
+
+LOCK TABLES `sumber_air` WRITE;
+/*!40000 ALTER TABLE `sumber_air` DISABLE KEYS */;
+INSERT INTO `sumber_air` VALUES (1,'SUNGAI'),(2,'DANAU'),(3,'MATA AIR'),(4,'BENDUNG / WADUK / SITU'),(5,'EMBUNG-EMBUNG'),(6,'JEBAKAN AIR');
+/*!40000 ALTER TABLE `sumber_air` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sumber_air_volume`
+--
+
+DROP TABLE IF EXISTS `sumber_air_volume`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sumber_air_volume` (
+  `id_sumber_air` int(11) NOT NULL,
+  `id_pokok_desa` int(11) NOT NULL,
+  `debit` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'KOSONG',
+  PRIMARY KEY (`id_sumber_air`,`id_pokok_desa`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sumber_air_volume`
+--
+
+LOCK TABLES `sumber_air_volume` WRITE;
+/*!40000 ALTER TABLE `sumber_air_volume` DISABLE KEYS */;
+INSERT INTO `sumber_air_volume` VALUES (1,1,'KECIL'),(2,1,'KOSONG'),(3,1,'KECIL'),(4,1,'KOSONG'),(5,1,'KOSONG'),(6,1,'BESAR');
+/*!40000 ALTER TABLE `sumber_air_volume` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -203,4 +280,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-06 11:50:35
+-- Dump completed on 2017-10-06 20:01:09
