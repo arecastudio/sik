@@ -16,6 +16,39 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `hasil_hutan`
+--
+
+DROP TABLE IF EXISTS `hasil_hutan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `hasil_hutan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_pokok_desa` int(11) NOT NULL,
+  `nama_komoditas` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hasil_panen` int(11) NOT NULL DEFAULT '0',
+  `satuan` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nilai_produksi` int(11) NOT NULL DEFAULT '0',
+  `nilai_baku` int(11) NOT NULL DEFAULT '0',
+  `biaya_penolong` int(11) NOT NULL DEFAULT '0',
+  `biaya_antara` int(11) NOT NULL DEFAULT '0',
+  `pemasaran_hasil` double NOT NULL DEFAULT '0',
+  `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `hasil_hutan`
+--
+
+LOCK TABLES `hasil_hutan` WRITE;
+/*!40000 ALTER TABLE `hasil_hutan` DISABLE KEYS */;
+INSERT INTO `hasil_hutan` VALUES (5,1,'Karet',0,'kubikpt',0,0,0,0,0,'2017-10-06 02:34:13'),(2,1,'Kopi',0,'kubikpt',0,0,0,0,0,'2017-10-06 02:32:08'),(6,1,'Kayu',0,'kubikpt',0,0,0,0,0,'2017-10-06 02:34:18'),(8,1,'Daun Pisang',100,'tonpt',10,0,15,0,87,'2017-10-06 02:35:06');
+/*!40000 ALTER TABLE `hasil_hutan` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `jenis_tanah`
 --
 
@@ -97,7 +130,7 @@ CREATE TABLE `tanah_desa` (
 
 LOCK TABLES `tanah_desa` WRITE;
 /*!40000 ALTER TABLE `tanah_desa` DISABLE KEYS */;
-INSERT INTO `tanah_desa` VALUES (1,1,55),(1,2,53),(1,3,7),(1,4,0),(1,5,0),(1,6,141),(1,7,70);
+INSERT INTO `tanah_desa` VALUES (1,1,55),(1,2,53),(1,3,7),(1,4,0),(1,5,245),(1,6,141),(1,7,70);
 /*!40000 ALTER TABLE `tanah_desa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,7 +181,7 @@ CREATE TABLE `tani_kebun` (
   `pemasaran_hasil` double NOT NULL DEFAULT '0',
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,7 +190,7 @@ CREATE TABLE `tani_kebun` (
 
 LOCK TABLES `tani_kebun` WRITE;
 /*!40000 ALTER TABLE `tani_kebun` DISABLE KEYS */;
-INSERT INTO `tani_kebun` VALUES (4,1,'Lemon Nipis',0,0,0,0,0,0,0,0,'2017-10-05 13:15:42'),(5,1,'Jeruk Purut',0,0,0,0,0,0,0,0,'2017-10-05 13:17:15'),(6,1,'Ketapang Kampung',70,0,280,0,0,0,0,0,'2017-10-05 20:57:29');
+INSERT INTO `tani_kebun` VALUES (4,1,'Lemon Nipis',0,0,0,0,0,0,0,0,'2017-10-05 13:15:42'),(5,1,'Jeruk Purut',0,0,0,0,0,0,0,0,'2017-10-05 13:17:15'),(10,1,'Pepaya Bangkok',56,88,34,266,6000,156,100,70,'2017-10-05 22:56:31'),(9,1,'Ketapang Kampung',56,5,5,5,666,555,555,777,'2017-10-05 21:40:07'),(12,1,'Tebu Hutan',33,33,33,33,33,44,44,5555,'2017-10-05 22:58:33');
 /*!40000 ALTER TABLE `tani_kebun` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -170,4 +203,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-06  6:38:51
+-- Dump completed on 2017-10-06 11:50:35

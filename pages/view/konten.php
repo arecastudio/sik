@@ -26,6 +26,9 @@ if (isset($_GET['ref'])) {
 	    case 'pertanian-perkebunan':
 	      require_once('pages/view/pertanian-perkebunan.php');
 	      break;
+	    case 'kehutanan':
+	      require_once('pages/view/kehutanan.php');
+	      break;
 		default:
 			# code...
 			break;
