@@ -5,7 +5,7 @@
   <div class="panel-body">
     <ul class="nav nav-tabs">
 	  <li role="presentation" class="active" ><a href="#">Potensi</a></li>
-	  <li role="presentation" ><a href="?ref=sumber-air&id_jenis=2">Kwalitas</a></li>
+	  <li role="presentation" ><a href="?ref=kwalitas-air">Kwalitas</a></li>
 	</ul>
 	<br/>
 

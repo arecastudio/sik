@@ -35,6 +35,9 @@ if (isset($_GET['ref'])) {
 	     case 'sumber-air':
 	     	require_once('pages/view/sumber-air.php');
 	     	break;
+	     case 'kwalitas-air':
+	     	require_once('pages/view/kwalitas-air.php');
+	     	break;
 		default:
 			# code...
 			break;
