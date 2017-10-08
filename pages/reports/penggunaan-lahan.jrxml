@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="penggunaan-lahan" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d2205b99-fbb4-4dcc-a974-54155fe11977">
 	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="0"/>
+	<property name="ireport.x" value="384"/>
 	<property name="ireport.y" value="192"/>
 	<parameter name="parameter1" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -167,7 +167,7 @@
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{satuan}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField pattern="#,##0">
 				<reportElement x="450" y="-1" width="58" height="21" uuid="ab08d36d-6326-43ac-8f56-4155b1e1fcb6"/>
 				<box>
 					<pen lineWidth="0.25"/>
