@@ -18,25 +18,28 @@ if (isset($_GET['ref'])) {
 			require_once('pages/view/sumber-daya-alam.php');
 			break;
 	    case 'penggunaan-lahan':
-	      require_once('pages/view/penggunaan-lahan.php');
-	      break;
+	      	require_once('pages/view/penggunaan-lahan.php');
+	      	break;
 	    case 'tanah-kering':
-	      require_once('pages/view/tanah-kering.php');
-	      break;
+	      	require_once('pages/view/tanah-kering.php');
+	      	break;
 	    case 'pertanian-perkebunan':
-	      require_once('pages/view/pertanian-perkebunan.php');
-	      break;
+	      	require_once('pages/view/pertanian-perkebunan.php');
+	      	break;
 	    case 'kehutanan':
-	      require_once('pages/view/kehutanan.php');
-	      break;
-	     case 'peternakan':
-	     	require_once('pages/view/peternakan.php');
+	      	require_once('pages/view/kehutanan.php');
+	      	break;
+	    case 'peternakan':
+	    	require_once('pages/view/peternakan.php');
 	     	break;
 	     case 'sumber-air':
 	     	require_once('pages/view/sumber-air.php');
 	     	break;
 	     case 'kwalitas-air':
 	     	require_once('pages/view/kwalitas-air.php');
+	     	break;
+	     case 'pariwisata':
+	     	require_once('pages/view/pariwisata.php');
 	     	break;
 		default:
 			# code...

@@ -120,8 +120,58 @@ CREATE TABLE `kwalitas_air_desa` (
 
 LOCK TABLES `kwalitas_air_desa` WRITE;
 /*!40000 ALTER TABLE `kwalitas_air_desa` DISABLE KEYS */;
-INSERT INTO `kwalitas_air_desa` VALUES (1,1,10,4,5,'BERASA'),(2,1,0,0,0,'BAIK'),(3,1,0,0,0,'BAIK'),(4,1,0,0,0,'BAIK'),(5,1,0,0,0,'BAIK'),(6,1,0,0,0,'BAIK'),(7,1,0,0,0,'BAIK'),(8,1,0,0,0,'BAIK'),(9,1,0,0,0,'BAIK'),(10,1,0,0,0,'BAIK'),(11,1,0,0,0,'BAIK'),(12,1,0,0,0,'BAIK');
+INSERT INTO `kwalitas_air_desa` VALUES (1,1,10,4,5,'BERASA'),(2,1,0,0,0,'BAIK'),(3,1,0,0,0,'BAIK'),(4,1,0,0,0,'BAIK'),(5,1,0,0,0,'BAIK'),(6,1,30,40,50,'BERBAU'),(7,1,0,0,0,'BAIK'),(8,1,0,0,0,'BAIK'),(9,1,0,0,0,'BAIK'),(10,1,0,0,0,'BAIK'),(11,1,0,0,0,'BAIK'),(12,1,0,0,0,'BAIK');
 /*!40000 ALTER TABLE `kwalitas_air_desa` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pariwisata`
+--
+
+DROP TABLE IF EXISTS `pariwisata`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pariwisata` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pariwisata`
+--
+
+LOCK TABLES `pariwisata` WRITE;
+/*!40000 ALTER TABLE `pariwisata` DISABLE KEYS */;
+INSERT INTO `pariwisata` VALUES (1,'Laut (Wisata Pulau, Taman Laut, Situs Sejarah Bahari, Pantai dll)'),(2,'Danau (Wisata Air, Hutan Wisata, Situs Purbakala, dll)'),(3,'Gunung (wisata Hutan, Taman Nasional, Bumi Perkemahan, dll)'),(4,'Agrowisata'),(5,'Hutan Khusus'),(6,'Goa'),(7,'Cagar Budaya'),(8,'Arung Jeram'),(9,'Situs Sejarah, dan museum'),(10,'Air Terjun'),(11,'Padang Savana (wisata Padang Savana)');
+/*!40000 ALTER TABLE `pariwisata` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pariwisata_desa`
+--
+
+DROP TABLE IF EXISTS `pariwisata_desa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pariwisata_desa` (
+  `id_pariwisata` int(11) NOT NULL,
+  `id_pokok_desa` int(11) NOT NULL,
+  `luas` int(11) NOT NULL DEFAULT '0',
+  `pemanfaatan` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'AKTIF',
+  PRIMARY KEY (`id_pariwisata`,`id_pokok_desa`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pariwisata_desa`
+--
+
+LOCK TABLES `pariwisata_desa` WRITE;
+/*!40000 ALTER TABLE `pariwisata_desa` DISABLE KEYS */;
+INSERT INTO `pariwisata_desa` VALUES (1,1,0,'AKTIF'),(2,1,0,'AKTIF'),(3,1,0,'AKTIF'),(4,1,0,'AKTIF'),(5,1,0,'AKTIF'),(6,1,0,'AKTIF'),(7,1,0,'AKTIF'),(8,1,0,'AKTIF'),(9,1,0,'AKTIF'),(10,1,4,'AKTIF'),(11,1,0,'NON-AKTIF');
+/*!40000 ALTER TABLE `pariwisata_desa` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -139,7 +189,7 @@ CREATE TABLE `peternakan` (
   `jml_populasi` int(11) NOT NULL DEFAULT '0',
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -332,4 +382,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-07  7:37:03
+-- Dump completed on 2017-10-08 20:46:18

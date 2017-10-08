@@ -119,13 +119,13 @@ text-align:right;
             <li><a href="#">One more separated link</a></li-->
           </ul>
         </li>
-        <li class="dropdown">
+        <!--li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data Keluarga<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Profil Keluarga</a></li>
             <li><a href="#">Profil Keluarga</a></li>
           </ul>
-        </li>
+        </li-->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Potensi Kampung<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -136,11 +136,29 @@ text-align:right;
             <li><a href="?ref=peternakan">Peternakan</a></li>
             <li><a href="?ref=sumber-air">Sumber Air</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Pariwisata</a></li>
+            <li><a href="?ref=pariwisata">Obyek Wisata</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Sumber Daya Manusia</a></li>
+            <li><a href="?ref=sdm">Sumber Daya Manusia</a></li>
           </ul>
         </li>
+
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Laporan<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="pages/reports/penggunaan-lahan.php" target="_blank">Penggunaan Lahan</a></li>
+            <!--li><a href="?ref=sumber-daya-alam">Sumber Daya Kampung</a></li-->
+            <li><a href="?ref=pertanian-perkebunan">Produksi Pertanian & Perkebunan</a></li>
+            <li><a href="?ref=kehutanan">Kehutanan</a></li>
+            <li><a href="?ref=peternakan">Peternakan</a></li>
+            <li><a href="?ref=sumber-air">Sumber Air</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="?ref=pariwisata">Obyek Wisata</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="?ref=sdm">Sumber Daya Manusia</a></li>
+          </ul>
+        </li>
+
       </ul>        
       <!--form class="navbar-form navbar-left">
         <div class="form-group">
