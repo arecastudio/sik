@@ -146,9 +146,9 @@ text-align:right;
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Laporan<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="pages/reports/penggunaan-lahan.php" target="_blank">Penggunaan Lahan</a></li>
+            <li><a href="pages/reports/cetak-laporan.php?rep=penggunaan-lahan" target="_blank">Penggunaan Lahan</a></li>
             <!--li><a href="?ref=sumber-daya-alam">Sumber Daya Kampung</a></li-->
-            <li><a href="?ref=pertanian-perkebunan">Produksi Pertanian & Perkebunan</a></li>
+            <li><a href="pages/reports/cetak-laporan.php?rep=pertanian-perkebunan" target="_blank">Produksi Pertanian & Perkebunan</a></li>
             <li><a href="?ref=kehutanan">Kehutanan</a></li>
             <li><a href="?ref=peternakan">Peternakan</a></li>
             <li><a href="?ref=sumber-air">Sumber Air</a></li>

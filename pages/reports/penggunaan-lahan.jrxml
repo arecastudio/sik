@@ -2,9 +2,12 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="penggunaan-lahan" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d2205b99-fbb4-4dcc-a974-54155fe11977">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="192"/>
+	<parameter name="parameter1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
-		<![CDATA[SELECT t.id,t.nama AS nama2,j.id,j.nama,t.satuan,IFNULL(td.luas,0),(SELECT MAX(id) FROM db_sik.tanah_guna),(SELECT CONCAT(desa_kelurahan,', ',kabupaten_kota,', ',provinsi) AS kampung FROM db_sik.pokok_desa WHERE id=1) AS nkampung FROM db_sik.tanah_guna AS t INNER JOIN db_sik.jenis_tanah AS j ON j.id=t.id_jenis LEFT OUTER JOIN db_sik.tanah_desa AS td ON td.id_tanah_guna=t.id AND td.id_pokok_desa=1 WHERE 1 ORDER BY j.nama ASC;]]>
+		<![CDATA[SELECT t.id,t.nama AS nama2,j.id,j.nama,t.satuan,IFNULL(td.luas,0),(SELECT MAX(id) FROM db_sik.tanah_guna),(SELECT CONCAT(desa_kelurahan,', ',kabupaten_kota,', ',provinsi) AS kampung FROM db_sik.pokok_desa WHERE id=$P{parameter1}) AS nkampung FROM db_sik.tanah_guna AS t INNER JOIN db_sik.jenis_tanah AS j ON j.id=t.id_jenis LEFT OUTER JOIN db_sik.tanah_desa AS td ON td.id_tanah_guna=t.id AND td.id_pokok_desa=$P{parameter1} WHERE 1 ORDER BY j.nama ASC;]]>
 	</queryString>
 	<field name="id" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>

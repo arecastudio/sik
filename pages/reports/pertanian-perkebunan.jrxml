@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pertanian-perkebunan" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e451b385-7a9d-4032-bb7b-415d1f5ca34b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT id, id_pokok_desa, nama_komoditas, luas, hasil_panen, nilai_produksi, biaya_pupuk, biaya_bibit, biaya_obat, biaya_lainnya, pemasaran_hasil,(SELECT CONCAT(desa_kelurahan,', ',kabupaten_kota,', ',provinsi) AS kampung FROM db_sik.pokok_desa WHERE id=1) AS nkampung FROM db_sik.tani_kebun WHERE id_pokok_desa=1 ORDER BY tanggal DESC;]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_pokok_desa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_komoditas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="luas" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hasil_panen" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nilai_produksi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="biaya_pupuk" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="biaya_bibit" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="biaya_obat" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="biaya_lainnya" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pemasaran_hasil" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nkampung" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="1" y="0" width="71" height="79" uuid="894686ea-02b6-4aa4-9992-6e71c29ea032"/>
+				<imageExpression><![CDATA["kab-jayapura-logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="72" y="0" width="245" height="20" uuid="62231858-274d-44e8-8f1f-b523b040a278"/>
+				<text><![CDATA[Pemerintah Kabupaten Jayapura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="20" width="483" height="31" uuid="0c7a655c-bd34-42d1-85ec-b9d7c3a85b02"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Lahan Pertanian & Perkebunan]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="11" width="110" height="20" uuid="fd9b103d-5739-492a-8733-95c20a0d91e0"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kampung :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="101" y="11" width="454" height="20" uuid="f7f09662-b591-46cc-ab32-ca82a43a9745"/>
+				<textFieldExpression><![CDATA[$F{nkampung}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="0" width="144" height="20" uuid="0c9e84a4-8784-4882-b7be-3b487cd7b0d2"/>
+				<text><![CDATA[nama_komoditas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="0" width="44" height="20" uuid="3a616226-8ab4-44b4-8b87-2670982ad904"/>
+				<text><![CDATA[luas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="44" height="20" uuid="dffdeec9-81e9-4ed9-af49-082e14580ad4"/>
+				<text><![CDATA[hasil_panen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="0" width="37" height="20" uuid="168342f3-1a09-4e65-8400-0e40d252a384"/>
+				<text><![CDATA[nilai_produksi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="0" width="42" height="20" uuid="e947094f-fb0e-49e1-8dac-ae5042b98a16"/>
+				<text><![CDATA[biaya_pupuk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="0" width="43" height="20" uuid="6135bcb9-ff46-45d3-9106-5a428e83a292"/>
+				<text><![CDATA[biaya_bibit]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="34" height="20" uuid="cea4dff3-2cb5-4634-9e43-8c2ef92b447d"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="34" y="0" width="144" height="20" uuid="634ceefc-78eb-43ba-b5b9-fd9e81f579ef"/>
+				<textFieldExpression><![CDATA[$F{nama_komoditas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="0" width="44" height="20" uuid="7e070578-ecc5-48ec-8665-3a0621c665cf"/>
+				<textFieldExpression><![CDATA[$F{luas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="44" height="20" uuid="322088b6-b269-4bdd-bf72-3b31cad3b8fa"/>
+				<textFieldExpression><![CDATA[$F{hasil_panen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="266" y="0" width="37" height="20" uuid="0e54553c-195f-47ea-8913-17aa934ae35a"/>
+				<textFieldExpression><![CDATA[$F{nilai_produksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="0" width="42" height="20" uuid="03973b15-d3a1-410f-bbaa-ff1e2dcc66eb"/>
+				<textFieldExpression><![CDATA[$F{biaya_pupuk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="345" y="0" width="43" height="20" uuid="6ce0e0f3-ef64-4453-9d86-53790e57b583"/>
+				<textFieldExpression><![CDATA[$F{biaya_bibit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
