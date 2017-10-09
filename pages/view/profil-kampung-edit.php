@@ -1,7 +1,7 @@
 <script type="text/javascript">
 	function SubmitData() {
-	    var id = $("[name='kode_pum']").val(),
-	    pum =$("#hidden_pum").val(),
+	    var id = $("[name='hidden_id']").val(),
+	    pum =$("#kode_pum").val(),
 	    kampung = $("[name='nama-kampung']").val(),
 	    kecamatan =$("#kecamatan").val(),
 	    kabupaten =$("#kabupaten").val(),
@@ -33,7 +33,7 @@
     <form method="post" action="" id="form-submit-entry-data-kampung">
     	<div class="input-group">
 		  <span class="input-group-addon labelinput" id="basic-addon1">Kode PUM</span>
-		  <input type="hidden" name="hidden_pum" id="hidden_pum" value="<?php echo $_GET['id'];?>" />
+		  <input type="hidden" name="hidden_id" id="hidden_id" value="<?php echo $_GET['id'];?>" />
 		  <input type="text" name="kode_pum" id="kode_pum2" class="form-control" placeholder="Masukkan kode Kampung" aria-describedby="basic-addon1" readonly value="<?php echo $_GET['kode_desa_pum'];?>" />
 		</div>
 		<div class="input-group">

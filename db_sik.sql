@@ -226,7 +226,7 @@ CREATE TABLE `pokok_desa` (
   `timur` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `barat` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -235,7 +235,7 @@ CREATE TABLE `pokok_desa` (
 
 LOCK TABLES `pokok_desa` WRITE;
 /*!40000 ALTER TABLE `pokok_desa` DISABLE KEYS */;
-INSERT INTO `pokok_desa` VALUES (1,'1234567890','Ebungfuw','Enarotali','Jayapura','Papua','1997','UU No. 5 Thn 1990','-','-2.560397','140.669000','Gunung','Gunung','Jurang','Danau'),(2,'1234567890','Paniai','Putali','Jayapura','Papua','1997','UU No. 5 Thn 1990','-','-2.560397','140.669000','Kali','Batu','Jurang','Danau'),(3,'541235456879','Sabron Yaru','Sentani Barat','Jayapura','Papua','1988','UUD','Ada','-2.528759','140.417322','danau','danau','gunung','gunung'),(4,'456156451','Nusu','Sentani Barat','Jayapura','Papua','1990','UUD','-','-2.528759','140.417322','jurang','jurang','jurang','jurang'),(5,'7894845654','Sabron Samon','Sentani Barat','Jayapura','Papua','1988','UUD','-','-','-','-','-','-','-'),(6,'7456456745646','Doyo Lama','Sentani Barat','Jayapura','Papua','1981','UUD','-','-','-','-','-','-','-'),(7,'22334','Hinekombe','Sentani Kota','Jayapura','Papua','1970','UUD','-','-','-','-','-','-','-');
+INSERT INTO `pokok_desa` VALUES (1,'1234567890','Ebungfuw','Enarotali','Jayapura','Papua','1997','UU No. 5 Thn 1990','-','-2.560397','140.669000','Gunung','Gunung','Jurang','Danau'),(2,'1234567890','Paniai','Putali','Jayapura','Papua','1997','UU No. 5 Thn 1990','-','-2.560397','140.669000','Kali','Batu','Jurang','Danau'),(3,'541235456879','Sabron Yaru','Sentani Barat','Jayapura','Papua','1988','UUD','Ada','-2.528759','140.417322','danau','danau','gunung','gunung'),(4,'456156451','Nusu','Sentani Barat','Jayapura','Papua','1990','UUD','-','-2.528759','140.417322','jurang','jurang','jurang','jurang'),(5,'7894845654','Sabron Samon','Sentani Barat','Jayapura','Papua','1988','UUD','-','-','-','-','-','-','-'),(6,'7456456745646','Doyo Lama','Sentani Barat','Jayapura','Papua','1981','UUD','-','-','-','-','-','-','-'),(7,'22334','Hinekombe','Sentani Kota','Jayapura','Papua','1970','UUD','-','-','-','-','-','-','-'),(8,'551254156','Robongholo','Sentani Barat','Jayapura','Papua','2005','UUD 45','ererer','454545','45454','jurang','jurang','kali','sungai'),(9,'22334','Hinekombe','Sentani Kota','Jayapura','Papua','1971','UUD','-','-','-','-','-','-','-'),(10,'22334','Hinekombe','Sentani Kota','Jayapura','Papua','1971','UUD 45','-','-','-','-','-','-','-');
 /*!40000 ALTER TABLE `pokok_desa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -382,4 +382,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-09 11:11:44
+-- Dump completed on 2017-10-09 17:12:14
