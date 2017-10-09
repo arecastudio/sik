@@ -108,11 +108,11 @@ text-align:right;
           <ul class="dropdown-menu">
             <li><a href="?ref=profil-kampung-list">Profil Kampung/Kelurahan</a></li>
             <li><a href="?ref=personil">Personil</a></li>
-            <li><a href="#">Data Umum</a></li>
+            <!--li><a href="#">Data Umum</a></li>
             <li><a href="#">Keuangan</a></li>
             <li><a href="#">Kelembagaan</a></li>
             <li><a href="#">Keamanan & Ketertiban</a></li>
-            <li><a href="#">Lingkungan Hidup</a></li>
+            <li><a href="#">Lingkungan Hidup</a></li-->
             <!--li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li role="separator" class="divider"></li>

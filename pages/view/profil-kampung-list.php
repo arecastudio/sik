@@ -36,6 +36,8 @@
 			if ($stmt->execute()) {
 				$result = $stmt->get_result();
 				while ($row = $result->fetch_row()){
+          $share="";
+          if(strlen(trim($row[9]))>5) $share="<a href=\"pages/view/peta.php\" target=\"_blank\"><span class=\"glyphicon glyphicon-share-alt\"></span></a>";
 					echo "
 					<tr>
 		  				<td>$i</td>
@@ -45,7 +47,7 @@
 		  				<td>$row[6]</td>
 		  				<td>$row[7]</td>
 		  				<td>$row[8]</td>
-		  				<td>$row[9],$row[10]</td>
+		  				<td>$row[9],$row[10] $share</td>
 		  				<td>$row[11]</td>
 		  				<td>$row[12]</td>
 		  				<td>$row[13]</td>
