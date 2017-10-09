@@ -1,8 +1,8 @@
--- MySQL dump 10.16  Distrib 10.1.26-MariaDB, for Linux (x86_64)
+-- MySQL dump 10.15  Distrib 10.0.32-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: db_sik
 -- ------------------------------------------------------
--- Server version	10.1.26-MariaDB
+-- Server version	10.0.32-MariaDB-0+deb8u1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -35,7 +35,7 @@ CREATE TABLE `hasil_hutan` (
   `pemasaran_hasil` double NOT NULL DEFAULT '0',
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `hasil_hutan` (
 
 LOCK TABLES `hasil_hutan` WRITE;
 /*!40000 ALTER TABLE `hasil_hutan` DISABLE KEYS */;
-INSERT INTO `hasil_hutan` VALUES (5,1,'Karet',0,'kubikpt',0,0,0,0,0,'2017-10-06 02:34:13'),(2,1,'Kopi',0,'kubikpt',0,0,0,0,0,'2017-10-06 02:32:08'),(6,1,'Kayu',0,'kubikpt',0,0,0,0,0,'2017-10-06 02:34:18'),(8,1,'Daun Pisang',100,'tonpt',10,0,15,0,87,'2017-10-06 02:35:06');
+INSERT INTO `hasil_hutan` VALUES (5,1,'Karet',0,'M3/thn',0,0,0,0,0,'2017-10-06 02:34:13'),(2,1,'Kopi',0,'M3/thn',0,0,0,0,0,'2017-10-06 02:32:08'),(6,1,'Kayu',0,'M3/thn',0,0,0,0,0,'2017-10-06 02:34:18'),(8,1,'Daun Pisang',100,'Ton/thn',10,0,15,0,87,'2017-10-06 02:35:06'),(9,1,'Kayu Genemo',34,'Ton/thn',676,454,22,997,540,'2017-10-09 01:03:48');
 /*!40000 ALTER TABLE `hasil_hutan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -189,7 +189,7 @@ CREATE TABLE `peternakan` (
   `jml_populasi` int(11) NOT NULL DEFAULT '0',
   `tanggal` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -198,7 +198,7 @@ CREATE TABLE `peternakan` (
 
 LOCK TABLES `peternakan` WRITE;
 /*!40000 ALTER TABLE `peternakan` DISABLE KEYS */;
-INSERT INTO `peternakan` VALUES (1,1,'Babi',50,1500,'2017-10-06 05:01:41'),(2,1,'Anjing',100,5000,'2017-10-06 05:01:54');
+INSERT INTO `peternakan` VALUES (1,1,'Babi',50,1500,'2017-10-06 05:01:41'),(2,1,'Anjing',100,5000,'2017-10-06 05:01:54'),(3,1,'Monyet',5,5000,'2017-10-09 01:23:31'),(4,1,'Soa Soa',2,8500,'2017-10-09 01:23:49'),(5,1,'Kutu Undur',1,35700,'2017-10-09 01:24:03');
 /*!40000 ALTER TABLE `peternakan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -382,4 +382,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-09  6:04:46
+-- Dump completed on 2017-10-09 11:11:44

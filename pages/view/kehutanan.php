@@ -15,9 +15,9 @@
 				<td><input type="text" name="hpanen" class="form-control text-luas" placeholder=""/></td>
 				<td>
 					<select id="satuan" name="satuan" class="form-control">
-						<option value="kubikpt">M&sup3;/th</option>
-						<option value="tonpt">Ton/th</option>
-						<option value="literpt">Liter/th</option>
+						<option value="M3/thn">M&sup3;/thn</option>
+						<option value="Ton/thn">Ton/thn</option>
+						<option value="Liter/thn">Liter/thn</option>
 					</select>
 				</td>
 				<td><input type="text" name="nproduk" class="form-control text-luas" placeholder=""/></td>

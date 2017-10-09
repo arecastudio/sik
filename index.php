@@ -149,11 +149,11 @@ text-align:right;
             <li><a href="pages/reports/cetak-laporan.php?rep=penggunaan-lahan" target="_blank">Penggunaan Lahan</a></li>
             <!--li><a href="?ref=sumber-daya-alam">Sumber Daya Kampung</a></li-->
             <li><a href="pages/reports/cetak-laporan.php?rep=pertanian-perkebunan" target="_blank">Produksi Pertanian & Perkebunan</a></li>
-            <li><a href="?ref=kehutanan">Kehutanan</a></li>
-            <li><a href="?ref=peternakan">Peternakan</a></li>
-            <li><a href="?ref=sumber-air">Sumber Air</a></li>
+            <li><a href="pages/reports/cetak-laporan.php?rep=kehutanan" target="_blank">Kehutanan</a></li>
+            <li><a href="pages/reports/cetak-laporan.php?rep=peternakan" target="_blank">Peternakan</a></li>
+            <li><a href="pages/reports/cetak-laporan.php?rep=sumber-air" target="_blank">Sumber Air</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="?ref=pariwisata">Obyek Wisata</a></li>
+            <li><a href="pages/reports/cetak-laporan.php?rep=pariwisata" target="_blank">Obyek Wisata</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="?ref=sdm">Sumber Daya Manusia</a></li>
           </ul>

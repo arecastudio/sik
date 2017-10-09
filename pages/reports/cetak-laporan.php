@@ -49,7 +49,39 @@ if (isset($_GET['rep'])) {
 			$PHPJasperXML->load_xml_file("pertanian-perkebunan.jrxml");
 			$PHPJasperXML->transferDBtoArray(HOST,USER,PASS,DB);
 			$PHPJasperXML->outpage("I");
+			break;	
+		case 'kehutanan':
+			$PHPJasperXML = new PHPJasperXML();
+			//$PHPJasperXML->debugsql=true;
+			$PHPJasperXML->arrayParameter=array("parameter1"=>$id_pokok_desa);
+			$PHPJasperXML->load_xml_file("kehutanan.jrxml");
+			$PHPJasperXML->transferDBtoArray(HOST,USER,PASS,DB);
+			$PHPJasperXML->outpage("I");
+			break;
+		case 'peternakan':
+			$PHPJasperXML = new PHPJasperXML();
+			//$PHPJasperXML->debugsql=true;
+			$PHPJasperXML->arrayParameter=array("parameter1"=>$id_pokok_desa);
+			$PHPJasperXML->load_xml_file("peternakan.jrxml");
+			$PHPJasperXML->transferDBtoArray(HOST,USER,PASS,DB);
+			$PHPJasperXML->outpage("I");
 			break;		
+		case 'sumber-air':
+			$PHPJasperXML = new PHPJasperXML();
+			//$PHPJasperXML->debugsql=true;
+			$PHPJasperXML->arrayParameter=array("parameter1"=>$id_pokok_desa);
+			$PHPJasperXML->load_xml_file("sumber-air.jrxml");
+			$PHPJasperXML->transferDBtoArray(HOST,USER,PASS,DB);
+			$PHPJasperXML->outpage("I");
+			break;				
+		case 'pariwisata':
+			$PHPJasperXML = new PHPJasperXML();
+			//$PHPJasperXML->debugsql=true;
+			$PHPJasperXML->arrayParameter=array("parameter1"=>$id_pokok_desa);
+			$PHPJasperXML->load_xml_file("pariwisata.jrxml");
+			$PHPJasperXML->transferDBtoArray(HOST,USER,PASS,DB);
+			$PHPJasperXML->outpage("I");
+			break;	
 		default:
 			# code...
 			break;
