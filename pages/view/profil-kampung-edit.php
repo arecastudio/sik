@@ -1,6 +1,7 @@
 <script type="text/javascript">
 	function SubmitData() {
-	    var keys = $("[name='kode_pum']").val(),
+	    var id = $("[name='kode_pum']").val(),
+	    pum =$("#hidden_pum").val(),
 	    kampung = $("[name='nama-kampung']").val(),
 	    kecamatan =$("#kecamatan").val(),
 	    kabupaten =$("#kabupaten").val(),
@@ -15,7 +16,7 @@
 	    timur =$("#timur").val(),
 	    barat =$("#barat").val();
 	    
-	    $.post("pages/model/profil-kampung-submit.php", {keys:keys,kampung:kampung,kecamatan:kecamatan,kabupaten:kabupaten,provinsi:provinsi,tahun:tahun,hukum:hukum,peta:peta,lat:lat,lon:lon,selatan:selatan,utara:utara,timur:timur,barat:barat},
+	    $.post("pages/model/profil-kampung-update.php", {id:id,kampung:kampung,kecamatan:kecamatan,kabupaten:kabupaten,provinsi:provinsi,tahun:tahun,hukum:hukum,peta:peta,lat:lat,lon:lon,selatan:selatan,utara:utara,timur:timur,barat:barat},
 	    function(data) {
 		 $('#hasil-submit').html(data);
 		 /*$('#form-submit-entry-data-kampung')[0].reset();*/
@@ -28,62 +29,64 @@
     <h3 class="panel-title">Entry Profil Kampung / Kelurahan</h3>
   </div>
   <div class="panel-body">
+  	<div class="col-sm-5">  	
     <form method="post" action="" id="form-submit-entry-data-kampung">
     	<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Kode PUM</span>
-		  <input type="text" name="kode_pum" id="kode_pum2" class="form-control" placeholder="Masukkan kode Kampung" aria-describedby="basic-addon1" readonly />
+		  <span class="input-group-addon labelinput" id="basic-addon1">Kode PUM</span>
+		  <input type="hidden" name="hidden_pum" id="hidden_pum" value="<?php echo $_GET['id'];?>" />
+		  <input type="text" name="kode_pum" id="kode_pum2" class="form-control" placeholder="Masukkan kode Kampung" aria-describedby="basic-addon1" readonly value="<?php echo $_GET['kode_desa_pum'];?>" />
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon2">Nama Kampung</span>
-		  <input type="text" name="nama-kampung" class="form-control" placeholder="Masukkan nama Kampung" aria-describedby="basic-addon2">
+		  <span class="input-group-addon labelinput" id="basic-addon2">Nama Kampung</span>
+		  <input type="text" name="nama-kampung" class="form-control" placeholder="Masukkan nama Kampung" aria-describedby="basic-addon2" value="<?php echo $_GET['desa_kelurahan'];?>">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Kecamatan</span>
-		  <input type="text" id="kecamatan" class="form-control" placeholder="Masukkan nama Kecamatan" aria-describedby="basic-addon1">
+		  <span class="input-group-addon labelinput" id="basic-addon1">Kecamatan</span>
+		  <input type="text" id="kecamatan" class="form-control" placeholder="Masukkan nama Kecamatan" aria-describedby="basic-addon1" value="<?php echo $_GET['kecamatan'];?>">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Kabupaten</span>
-		  <input type="text" id="kabupaten" class="form-control" placeholder="Masukkan nama Kabupaten" aria-describedby="basic-addon1">
+		  <span class="input-group-addon labelinput" id="basic-addon1">Kabupaten</span>
+		  <input type="text" id="kabupaten" class="form-control" placeholder="Masukkan nama Kabupaten" aria-describedby="basic-addon1" value="<?php echo $_GET['kabupaten_kota'];?>">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Provinsi</span>
-		  <input type="text" id="provinsi" class="form-control" placeholder="Masukkan nama Provinsi" aria-describedby="basic-addon1">
+		  <span class="input-group-addon labelinput" id="basic-addon1">Provinsi</span>
+		  <input type="text" id="provinsi" class="form-control" placeholder="Masukkan nama Provinsi" aria-describedby="basic-addon1" value="<?php echo $_GET['provinsi'];?>">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Tahun Bentuk</span>
-		  <input type="text" id="tahun" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		  <span class="input-group-addon labelinput" id="basic-addon1">Tahun Bentuk</span>
+		  <input type="text" id="tahun" class="form-control" placeholder="" aria-describedby="basic-addon1" value="<?php echo $_GET['tahun_bentuk'];?>">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Dasar Hukum</span>
-		  <input type="text" id="dasar_hukum" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		  <span class="input-group-addon labelinput" id="basic-addon1">Dasar Hukum</span>
+		  <input type="text" id="dasar_hukum" class="form-control" placeholder="" aria-describedby="basic-addon1" value="<?php echo $_GET['dasar_hukum'];?>">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Peta Resmi</span>
-		  <input type="text" id="peta_resmi" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		  <span class="input-group-addon labelinput" id="basic-addon1">Peta Resmi</span>
+		  <input type="text" id="peta_resmi" class="form-control" placeholder="" aria-describedby="basic-addon1" value="<?php echo $_GET['peta_resmi_wilayah'];?>">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Koordinat Lat.</span>
-		  <input type="text" id="lat" class="form-control" placeholder="Masukkan koordinat Lintang" aria-describedby="basic-addon1">
+		  <span class="input-group-addon labelinput" id="basic-addon1">Koordinat Lat.</span>
+		  <input type="text" id="lat" class="form-control" placeholder="Masukkan koordinat Lintang" aria-describedby="basic-addon1" value="<?php echo $_GET['lat'];?>">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Koordinat Lon.</span>
-		  <input type="text" id="lon" class="form-control" placeholder="Masukkan koordinat Bujur" aria-describedby="basic-addon1">
+		  <span class="input-group-addon labelinput" id="basic-addon1">Koordinat Lon.</span>
+		  <input type="text" id="lon" class="form-control" placeholder="Masukkan koordinat Bujur" aria-describedby="basic-addon1" value="<?php echo $_GET['lon'];?>">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Batas Utara</span>
-		  <input type="text" id="utara" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		  <span class="input-group-addon labelinput" id="basic-addon1">Batas Utara</span>
+		  <input type="text" id="utara" class="form-control" placeholder="" aria-describedby="basic-addon1" value="<?php echo $_GET['utara'];?>">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Batas Selatan</span>
-		  <input type="text" id="selatan" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		  <span class="input-group-addon labelinput" id="basic-addon1">Batas Selatan</span>
+		  <input type="text" id="selatan" class="form-control" placeholder="" aria-describedby="basic-addon1" value="<?php echo $_GET['selatan'];?>">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Batas Timur</span>
-		  <input type="text" id="timur" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		  <span class="input-group-addon labelinput" id="basic-addon1">Batas Timur</span>
+		  <input type="text" id="timur" class="form-control" placeholder="" aria-describedby="basic-addon1" value="<?php echo $_GET['timur'];?>">
 		</div>
 		<div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">Batas Barat</span>
-		  <input type="text" id="barat" class="form-control" placeholder="" aria-describedby="basic-addon1">
+		  <span class="input-group-addon labelinput" id="basic-addon1">Batas Barat</span>
+		  <input type="text" id="barat" class="form-control" placeholder="" aria-describedby="basic-addon1" value="<?php echo $_GET['barat'];?>">
 		</div>
 
 <center>
@@ -95,5 +98,6 @@
 		  <button type="button" onclick="SubmitData()" class="btn btn-primary btn-lg">Simpan</button>
 		</div>
     </form>
+	</div>
   </div>
 </div>

@@ -53,6 +53,7 @@
 		  				<td>$row[13]</td>
 		  				<td>$row[14]</td>
 		  				<td><a href=\"#\" class=\"btn btn-sm btn-danger\"><span class=\"glyphicon glyphicon-trash\"></span></a></td>
+              
 		  				<td><a href=\"?ref=profil-kampung-edit&id=$row[0]&kode_desa_pum=$row[1]&desa_kelurahan=$row[2]&kecamatan=$row[3]&kabupaten_kota=$row[4]&provinsi=$row[5]&tahun_bentuk=$row[6]&dasar_hukum=$row[7]&peta_resmi_wilayah=$row[8]&lat=$row[9]&lon=$row[10]&utara=$row[11]&selatan=$row[12]&timur=$row[13]&barat=$row[14]\" class=\"btn btn-sm btn-warning\"><span class=\"glyphicon glyphicon-pencil\"></span></a></td>
 		  			</tr>
 					";

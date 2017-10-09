@@ -48,6 +48,9 @@ $id_pokok_desa=1;
       font-size: 15px;
       font-weight: bold;
     }
+    .labelinput{
+      min-width: 200px;
+    }
 
 .text-luas{
 max-width:100px;
