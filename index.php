@@ -110,7 +110,9 @@ text-align:right;
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data Pokok<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="?ref=profil-kampung-list">Profil Kampung/Kelurahan</a></li>
-            <li><a href="?ref=personil">Personil</a></li>
+            <!--li><a href="?ref=personil">Personil</a></li-->
+            <li role="separator" class="divider"></li>
+            <li><a href="?ref=pilih-kampung">Pilih Kampung <span class="glyphicon glyphicon-tasks"></span></a></li>
             <!--li><a href="#">Data Umum</a></li>
             <li><a href="#">Keuangan</a></li>
             <li><a href="#">Kelembagaan</a></li>

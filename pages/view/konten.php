@@ -41,6 +41,9 @@ if (isset($_GET['ref'])) {
 	     case 'pariwisata':
 	     	require_once('pages/view/pariwisata.php');
 	     	break;
+	     case 'pilih-kampung':
+	     	require_once('pages/view/pilih-kampung.php');
+	     	break;
 		default:
 			# code...
 			break;
